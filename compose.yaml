@@ -1,0 +1,14 @@
+services:
+  bots-crew-test-task-db:
+    image: postgres:latest
+    ports:
+      - "2345:5432"
+    environment:
+      POSTGRES_DB: bots-crew-test-task-db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: dummy
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

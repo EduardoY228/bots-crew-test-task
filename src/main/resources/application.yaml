@@ -1,0 +1,25 @@
+server:
+  port: 8888
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:2345/bots-crew-test-task-db
+    username: 'admin'
+    password: 'dummy'
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org:
+      hibernate:
+        sql: debug
+    web: debug
